@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/home/header/header";
+import NotFound from "./components/notFound/notFound";
+import Footer from "./components/home/footer/footer";
+import Banner from "./components/home/banner/banner";
+import Courses from "./components/home/courses/courses";
+import AllCourses from "./components/allCourses/allCourses";
+import CourseDetails from "./components/courseDetails/courseDetails";
+import Turors from "./components/tutors/turors";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <Switch>
+        <Route path="/tutors">
+          <Turors />
+        </Route>
+        <Route path="/courses">
+          <AllCourses />
+        </Route>
+        <Route path="/home">
+          <Banner />
+          <Courses />
+        </Route>
+        <Route path="/course/:id">
+          <CourseDetails />
+        </Route>
+        <Route exact path="/">
+          <Banner />
+          <Courses />
+        </Route>
+        <Route path="*">
+          <NotFound />
+        </Route>
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
