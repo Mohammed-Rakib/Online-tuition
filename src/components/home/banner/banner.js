@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import banner from "../../../images/header-bg.png";
 import "./banner.css";
 
@@ -13,7 +13,7 @@ const Banner = () => {
         </h5>
       </div>
       <Row>
-        <Col>
+        <div className="col-lg-6 col-md-6 col-12">
           <h1 className="mb-3 main-text">
             The Prodigious eLearning Courses for you
           </h1>
@@ -27,10 +27,10 @@ const Banner = () => {
             <li>Privided with Experimental Examples</li>
             <li>Certification Awarded</li>
           </ul>
-        </Col>
-        <Col>
+        </div>
+        <div className="col-lg-6 col-md-6 col-12">
           <img src={banner} className="img-fluid" alt="" />
-        </Col>
+        </div>
       </Row>
     </Container>
   );

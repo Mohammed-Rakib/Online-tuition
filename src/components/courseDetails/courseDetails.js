@@ -16,7 +16,7 @@ const CourseDetails = () => {
   return (
     <Container className="course-details">
       <Row>
-        <div className="col-lg-6 col-md-6 py-5 border-end">
+        <div className="col-lg-6 col-md-6 col-12 py-5 border-end">
           <img src={thumb} className="img-fluid pt-5" alt="" />
           <h1 className="main-text mt-4">{name}</h1>
           <h6 className="common-text my-3">{description}</h6>
@@ -25,7 +25,7 @@ const CourseDetails = () => {
             {price}
           </h3>
         </div>
-        <div className="col-lg-6 col-md-6 py-5 ">
+        <div className="col-lg-6 col-md-6 col-12 py-5 ">
           <h3 className="common-text pt-5">
             {" "}
             <BsBoxArrowInUpRight className="text-success" /> 100% Authentic
