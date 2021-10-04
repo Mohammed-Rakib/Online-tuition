@@ -4,3 +4,13 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+.common-text {
+  color: rgba(128, 128, 128, 0.836);
+}
+.main-text {
+  color: #134477;
+}
+
+li {
+  color: rgba(128, 128, 128, 0.836);
+}

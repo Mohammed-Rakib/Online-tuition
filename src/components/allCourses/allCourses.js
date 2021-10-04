@@ -1,10 +1,12 @@
 import React from "react";
+import { useContext } from "react";
 import { Container } from "react-bootstrap";
+import { CourseContext } from "../../App";
 import Course from "../course/course";
-import useCourses from "../hooks/useCourses";
 
 const AllCourses = () => {
-  const [courses] = useCourses();
+  const [courses] = useContext(CourseContext);
+
   return (
     <Container className="py-5">
       <div className="text-center">

@@ -1,12 +1,20 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { CourseContext } from "../../../App";
 import Course from "../../course/course";
-import useCourses from "../../hooks/useCourses";
 
 const Courses = () => {
-  const [courses] = useCourses();
+  const [courses, setCourses] = useContext(CourseContext);
   const showCourse = courses.slice(0, 4);
+
+  useEffect(() => {
+    fetch("./courses.JSON")
+      .then((response) => response.json())
+      .then((data) => setCourses(data));
+  }, []);
 
   return (
     <Container className="py-5">

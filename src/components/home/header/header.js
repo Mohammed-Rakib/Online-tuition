@@ -49,13 +49,6 @@ const Header = () => {
               >
                 About
               </NavLink>
-              <NavLink
-                activeStyle={activeStyle}
-                className="nav-link"
-                to="/contact"
-              >
-                Contact
-              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

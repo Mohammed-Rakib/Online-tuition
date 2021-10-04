@@ -8,12 +8,21 @@ import Courses from "./components/home/courses/courses";
 import AllCourses from "./components/allCourses/allCourses";
 import CourseDetails from "./components/courseDetails/courseDetails";
 import Turors from "./components/tutors/turors";
+import About from "./components/about/about";
+import { createContext } from "react";
+import { useState } from "react";
+
+export const CourseContext = createContext();
 
 function App() {
+  const [courses, setCourses] = useState([]);
   return (
-    <>
+    <CourseContext.Provider value={[courses, setCourses]}>
       <Header></Header>
       <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
         <Route path="/tutors">
           <Turors />
         </Route>
@@ -36,7 +45,7 @@ function App() {
         </Route>
       </Switch>
       <Footer />
-    </>
+    </CourseContext.Provider>
   );
 }
 

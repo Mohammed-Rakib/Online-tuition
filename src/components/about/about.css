@@ -1,0 +1,7 @@
+.about {
+  height: 60vh;
+  margin: 20px auto;
+  background-image: url(../../images/about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
