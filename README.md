@@ -11,6 +11,4 @@
 
 1.npx create react app 2. react router dom 3. React Bootstrap 4. Context API
 
-##### github repo : [https://github.com/ProgrammingHeroWC4/review-website-Mohammed-Rakib]
-
 ##### live site: [https://serene-mcnulty-323686.netlify.app/]
